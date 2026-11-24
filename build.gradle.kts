@@ -1,6 +1,7 @@
 /*
  * Copyright 2026 Proify, Tomakino
  * Licensed under the Apache License, Version 2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  */
 
 import com.android.build.api.dsl.ApplicationExtension
@@ -23,6 +24,8 @@ configure<ApplicationExtension> {
         targetSdk = rootProject.extra.get("targetSdkVersion") as Int
         versionCode = 1
         versionName = "1.0.0"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     signingConfigs {
@@ -35,7 +38,9 @@ configure<ApplicationExtension> {
     }
 
     buildTypes {
-        getByName("debug") { isDebuggable = true }
+        getByName("debug") {
+            isDebuggable = true
+        }
         getByName("release") {
             isMinifyEnabled = false
             isShrinkResources = false
@@ -47,7 +52,9 @@ configure<ApplicationExtension> {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    buildFeatures { buildConfig = true }
+    buildFeatures {
+        buildConfig = true
+    }
 }
 
 dependencies {
@@ -65,4 +72,7 @@ dependencies {
     ksp(libs.yukihookapi.ksp.xposed)
 
     implementation(libs.androidx.core.ktx)
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
 }
