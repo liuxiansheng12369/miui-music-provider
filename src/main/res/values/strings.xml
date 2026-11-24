@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">小米音乐歌词支持</string>
+    <string name="xposed_description">为词幕提供小米音乐（澎湃 OS 自带）的歌词</string>
+    <string name="lyricon_module_description">提供小米音乐歌词：用 songmid 直取 QQ 音乐词库，失败再按歌名+歌手搜索兜底，支持逐字与翻译。</string>
+</resources>

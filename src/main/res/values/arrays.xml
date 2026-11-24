@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="xposed_scope">
+        <item>com.miui.player</item>
+    </string-array>
+    <string-array name="lyricon_module_tags">
+        <item>逐字歌词</item>
+        <item>翻译歌词</item>
+    </string-array>
+</resources>
